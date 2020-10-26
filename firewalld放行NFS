@@ -1,0 +1,7 @@
+firewalld 放行NFS
+
+使用 firewalld 防火牆 （--permanent永久生效，没有此参数重启后失效）
+# /usr/bin/firewall-cmd --permanent --zone public --add-service mountd
+# /usr/bin/firewall-cmd --permanent --zone public --add-service rpc-bind
+# /usr/bin/firewall-cmd --permanent --zone public --add-service nfs
+# /usr/bin/firewall-cmd --reload
